@@ -1,0 +1,90 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Page Principle</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+		<link rel="stylesheet" href="/css/style.css">
+	</head>
+	<body>
+		<br>
+		<main>
+			<section style="text-align: center;">
+				<div class="card card2">
+					<div id="stars"></div>
+					<div id="stars2"></div>
+					<div id="stars3"></div>
+					<div class="card-body">
+						<div id="containerButton">
+							<div class="button">
+								<a href="/inscriptionpokemon"><input onclick="play()" class="favorite styled" type="submit" value="🔵 ADD POKEMON 🔵"></a>&nbsp;
+								<a href="/logout">
+									<button onclick="play()" type="button">🔴 DECONNECTION 🔴
+									</button>&nbsp;</a>
+							</div>
+						</div>
+						<div class="logo">
+							<img style="width: 400px;" src="/pictures/poke.svg.png">
+						</div>
+						<br><br>
+						<img class="poke2" src="/pictures/ball2.png">&nbsp;
+						<img class="poke" src="/pictures/bulbasaur.png">&nbsp;
+						<img class="poke" src="/pictures/celebi.png">&nbsp;
+						<img class="poke" src="/pictures/charmander.png">&nbsp;
+						<img class="poke" src="/pictures/chikorita.png">&nbsp;
+						<img class="poke" src="/pictures/cyndaquil.png">&nbsp;
+						<img class="poke" src="/pictures/eevee.png">&nbsp;
+						<img class="poke" src="/pictures/mew.png">&nbsp;
+						<img class="poke" src="/pictures/pikachu.png">&nbsp;
+						<img class="poke" src="/pictures/squirtle.png">&nbsp;
+						<img class="poke" src="/pictures/totodile.png">&nbsp;
+						<img class="poke2" src="/pictures/ball2.png">
+						<br><br>
+						<h1>
+							POKEDEX
+						</h1>
+						<table class="table table-striped">
+							<thead>
+								<tr>
+									<th>TRAINER :</th>
+									<th>POKEMON :</th>
+									<th>POKE LEVEL :</th>
+									<th>POKE TYPE :</th>
+									<th>DELETE / EDIT :</th>
+								</tr>
+							</thead>
+							<tbody>
+								{% for pokemon in pokemons %}
+									<tr>
+										<td class="box" style="font-size:20"><br><br><br>{{userConnected}}</td>
+										<td class="box">
+											<img class="poke box" src="./pictures2/074.png">
+											<hr style="color:white; border: 1px solid;" ;>
+											<p style="font-size:20">{{pokemon.firstname}}</p>
+										</td>
+										<td style="font-size:20" class="box"><br><br><br>{{pokemon.level}}</td>
+										<td style="font-size:20" class="box"><br><br><br>{{pokemon.type}}</td>
+										<td class="box">
+											<br><br>
+											<button onclick="play()">
+												<a href="/deletePokemon/{{pokemon._id}}">
+													⚫ DELETE ⚫
+												</a>
+											</button>
+											<hr style="color:white; border: 1px solid;" ;>
+											<button onclick="play()">
+												<a href="updatePokemon/{{pokemon.id}}">
+													⚫ EDIT ⚫</a>
+											</button>
+										</td>
+									</tr>
+								</td>
+							</tbody>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html></div></section></main><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><script src="/js/main.js"></script></body></html>
